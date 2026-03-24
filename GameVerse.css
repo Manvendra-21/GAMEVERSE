@@ -48,7 +48,7 @@ header {
 .remastered {
   font-size: 12px;
   color: black;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .nav-links {
@@ -107,55 +107,61 @@ header {
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 10px red; }
-  to { text-shadow: 0 0 15px orange; }
+  from {
+    text-shadow: 0 0 10px red;
+  }
+
+  to {
+    text-shadow: 0 0 15px orange;
+  }
 }
 
-.upcoming-card{
-    display: flex;
-    color: white;
-    background: #ffffff;
-    border-radius: 10px;
-    flex-wrap: wrap;
-    margin: 20px;
-    gap: 0px;
-    flex-direction: column;
-    padding: 20px 20px 0px 20px;
+.upcoming-card {
+  display: flex;
+  color: white;
+  background: #ffffff;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 0px;
+  flex-direction: column;
+  padding: 20px 20px 0px 20px;
 }
 
 /* Soft ambient glow behind video */
 .upcoming-card video {
-    box-shadow:
-        0 0 40px rgba(255, 120, 0, 0.6),
-        0 0 80px rgba(255, 60, 0, 0.4);
-    border-radius: 10px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow:
+    0 0 40px rgba(255, 120, 0, 0.6),
+    0 0 80px rgba(255, 60, 0, 0.4);
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Smooth scale on hover */
 .upcoming-card video:hover {
-    transform: scale(1.01);
-    box-shadow:
-        0 0 60px rgba(255, 140, 0, 0.8),
-        0 0 120px rgba(255, 80, 0, 0.6);
+  transform: scale(1.01);
+  box-shadow:
+    0 0 60px rgba(255, 140, 0, 0.8),
+    0 0 120px rgba(255, 80, 0, 0.6);
 }
 
 /* Ambient light pulse animation */
 @keyframes ambientPulse {
-    0% {
-        box-shadow:
-            0 0 30px rgba(255, 120, 0, 0.5),
-            0 0 60px rgba(255, 60, 0, 0.3);
-    }
-    100% {
-        box-shadow:
-            0 0 30px rgba(255, 140, 0, 0.7),
-            0 0 50px rgba(255, 80, 0, 0.5);
-    }
+  0% {
+    box-shadow:
+      0 0 30px rgba(255, 120, 0, 0.5),
+      0 0 60px rgba(255, 60, 0, 0.3);
+  }
+
+  100% {
+    box-shadow:
+      0 0 30px rgba(255, 140, 0, 0.7),
+      0 0 50px rgba(255, 80, 0, 0.5);
+  }
 }
 
 .upcoming-card video {
-    animation: ambientPulse 3s ease-in-out infinite alternate;
+  animation: ambientPulse 3s ease-in-out infinite alternate;
 }
 
 .spec-box {
@@ -304,7 +310,7 @@ header {
 .main-media img {
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 0 40px rgba(255,120,0,0.6);
+  box-shadow: 0 0 40px rgba(255, 120, 0, 0.6);
   transition: 0.3s;
 }
 
@@ -337,5 +343,5 @@ header {
 footer {
   text-align: center;
   padding: 20px;
-  background: #111;
+  background: #000000;
 }
