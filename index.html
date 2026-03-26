@@ -8,16 +8,20 @@
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Orbitron:wght@400..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Orbitron:wght@400..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+    rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Orbitron:wght@400..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Orbitron:wght@400..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+    rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="GameVerse.css">
-  <link rel="icon" href="./images_gameverse/logo.png">
+  <link rel="icon" href="./images_gameverse/logo_2.png">
 </head>
 
 <body>
@@ -25,22 +29,50 @@
   <header class="header">
     <nav class="navbar">
       <div class="brand">
-        <img src="./images_gameverse/logo.png" class="logo-img">
-        <div>
+        <img src="./images_gameverse/logo_2.png" class="logo-img">
+        <div class="brand-text">
           <span class="logo">GameVerse</span><br>
           <span class="remastered">Remastered</span>
         </div>
       </div>
 
       <ul class="nav-links">
-        <li><a href="#action">Action</a></li>
-        <li><a href="#survival">Survival</a></li>
-        <li><a href="#racing">Racing</a></li>
-        <li><a href="#rpg">RPG</a></li>
-        <li><a href="#horror">Horror</a></li>
+        <li><a href="#action">Home</a></li>
+        <li><a href="#Upcoming">Upcoming</a></li>
+        <li><a href="#racing">Reviews</a></li>
+        <li><a href="#rpg">Contact Us</a></li>
       </ul>
 
-      <input class="search" type="text" placeholder="Search games...">
+      <div class="nav-right">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input class="search" type="text" placeholder="Search games...">
+        </div>
+
+        <div class="profile-btn" onclick="openPopup()">
+          <img src="images_gameverse/profile.png" alt="profile">
+        </div>
+      </div>
+
+      <!-- Login pop up -->
+      <div class="popup" id="loginPopup">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2 style="margin-bottom: 20px; margin-left: -2px;">Login</h2>
+
+          <div class="input-group">
+            <input type="text" id="username" required>
+            <label>Username/Email</label>
+          </div>
+
+          <div class="input-group">
+            <input type="password" id="password" required>
+            <label>Password</label>
+          </div>
+          <button class="submit-btn" onclick="handleLogin()">Login→</button><br>
+          <p id="login-msg"></p>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -56,24 +88,34 @@
 
     <div class="genre-container">
       <div class="genre-card">
-        <img src="images_gameverse/actiongenre.png" alt="Action">
-        <h3>Action</h3>
+        <a href="#action" style="text-decoration: none; color:white;">
+          <img src="images_gameverse/actiongenre.png" alt="Action">
+          <h3>Action</h3>
+        </a>
       </div>
       <div class="genre-card">
-        <img src="images_gameverse/survivalgenre.png" alt="Survival">
-        <h3>Survival</h3>
+        <a href="#survival" style="text-decoration: none; color:white;">
+          <img src="images_gameverse/survivalgenre.png" alt="Survival">
+          <h3>Survival</h3>
+        </a>
       </div>
       <div class="genre-card">
-        <img src="images_gameverse/racing.png" alt="Racing">
-        <h3>Racing</h3>
+        <a href="#racing" style="text-decoration: none; color:white;">
+          <img src="images_gameverse/racing.png" alt="Racing">
+          <h3>Racing</h3>
+        </a>
       </div>
       <div class="genre-card">
-        <img src="images_gameverse/rpg.png" alt="Rpg">
-        <h3>RPG</h3>
+        <a href="#rpg" style="text-decoration: none; color:white;">
+          <img src="images_gameverse/rpg.png" alt="Rpg">
+          <h3>RPG</h3>
+        </a>
       </div>
       <div class="genre-card">
-        <img src="images_gameverse/horror.png" alt="Horror">
-        <h3>Horror</h3>
+        <a href="#horror" style="text-decoration: none; color:white;">
+          <img src="images_gameverse/horror.png" alt="Horror">
+          <h3>Horror</h3>
+        </a>
       </div>
     </div>
   </section><br><br>
@@ -109,24 +151,37 @@
   <section id="action" class="games">
     <h2 class="section-title">→ Action</h2>
     <div class="cards">
-      <div class="card"><img src="./images_gameverse/gtav.png">
-        <a href="webpages_games/gtav.html" style="text-decoration: none; color: black; font-weight: bold;">GTA V</a>
+      <div class="card"><a href="webpages_games/gtav.html"
+          style="text-decoration: none; color: black; font-weight: bold;">
+          <img src="./images_gameverse/gtav.png">
+          GTA V</a>
         <p>⭐ 9.4</p>
       </div>
-      <div class="card"><img src="./images_gameverse/rdr2.jpg">
-        <a href="webpages_games/rdr2.html" style="text-decoration: none; color: black; font-weight: bold;">Red Dead Redemption 2</a>
+      <div class="card"><a href="webpages_games/rdr2.html"
+          style="text-decoration: none; color: black; font-weight: bold;">
+          <img src="./images_gameverse/rdr2.jpg">
+          Red Dead Redemption 2</a>
         <p>⭐ 9.8</p>
       </div>
-      <div class="card"><img src="./images_gameverse/god-of-war.jpg">
-        <a href="webpages_games/gowr.html" style="text-decoration: none; color: black; font-weight: bold;">God of War Ragnarök</a>
+      <div class="card"><a href="webpages_games/gowr.html"
+          style="text-decoration: none; color: black; font-weight: bold;">
+          <img src="./images_gameverse/god-of-war.jpg">
+          God of War
+          Ragnarök</a>
         <p>⭐ 9.5</p>
       </div>
-      <div class="card"><img src="./images_gameverse/blackops2.jpg">
-        <a href="webpages_games/codblackops.html" style="text-decoration: none; color: black; font-weight: bold;">COD Black Ops II</a>
+      <div class="card"><a href="webpages_games/codblackops.html"
+          style="text-decoration: none; color: black; font-weight: bold;">
+          <img src="./images_gameverse/blackops2.png">
+          COD
+          Black Ops II</a>
         <p>⭐ 9.7</p>
       </div>
-      <div class="card"><img src="./images_gameverse/hitman3.png">
-        <a href="webpages_games/hitman3.html" style="text-decoration: none; color: black; font-weight: bold;">Hitman 3</a>
+      <div class="card"><a href="webpages_games/hitman3.html"
+          style="text-decoration: none; color: black; font-weight: bold;">
+          <img src="./images_gameverse/hitman3.png">
+          Hitman
+          3</a>
         <p>⭐ 9.0</p>
       </div>
     </div>
