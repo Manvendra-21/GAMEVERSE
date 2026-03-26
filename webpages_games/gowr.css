@@ -10,7 +10,8 @@ body {
   display: flex;
   justify-content: center;
   padding: 10px 30px;
-  background: black;
+  color: black;
+  background: linear-gradient(90deg, #ff0000, #ff0000, #ffff00);
   border-bottom: 3px solid rgb(255, 255, 255);
 }
 
@@ -98,7 +99,10 @@ video {
 footer {
   text-align: center;
   padding: 20px;
-  background: black;
+  font-weight: bold;
+  border-top: 3px solid rgb(255, 255, 255);
+  color: black;
+  background: linear-gradient(90deg, #ff0000, #ff0000, #ffff00);
 }
 
 /* RESPONSIVE */
