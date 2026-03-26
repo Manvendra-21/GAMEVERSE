@@ -1,0 +1,420 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* navbar */
+header {
+  border-bottom: 3px solid orange;
+  background: linear-gradient(90deg, red, orange, yellow);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  color: black;
+}
+
+.remastered {
+  font-size: 12px;
+  color: black;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: black;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  padding: 8px 16px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  background: orange;
+  color: black;
+}
+
+/* POPUP BACKGROUND */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* POPUP BOX */
+.popup-content {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* INPUTS */
+.popup-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background: orange;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+.search {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* hero */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 200px;
+  background: linear-gradient(90deg, red, orange, yellow);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: glow 1.5s infinite alternate;
+}
+
+.hero-sub {
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px red;
+  }
+
+  to {
+    text-shadow: 0 0 15px orange;
+  }
+}
+
+.upcoming-card {
+  display: flex;
+  color: white;
+  background: #ffffff;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 0px;
+  flex-direction: column;
+  padding: 20px 20px 0px 20px;
+}
+
+/* Soft ambient glow behind video */
+.upcoming-card video {
+  box-shadow:
+    0 0 40px rgba(255, 120, 0, 0.6),
+    0 0 80px rgba(255, 60, 0, 0.4);
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Smooth scale on hover */
+.upcoming-card video:hover {
+  transform: scale(1.01);
+  box-shadow:
+    0 0 60px rgba(255, 140, 0, 0.8),
+    0 0 120px rgba(255, 80, 0, 0.6);
+}
+
+/* Ambient light pulse animation */
+@keyframes ambientPulse {
+  0% {
+    box-shadow:
+      0 0 30px rgba(255, 120, 0, 0.5),
+      0 0 60px rgba(255, 60, 0, 0.3);
+  }
+
+  100% {
+    box-shadow:
+      0 0 30px rgba(255, 140, 0, 0.7),
+      0 0 50px rgba(255, 80, 0, 0.5);
+  }
+}
+
+.upcoming-card video {
+  animation: ambientPulse 3s ease-in-out infinite alternate;
+}
+
+.spec-box {
+  margin-top: 25px;
+  padding: 20px;
+  background: linear-gradient(90deg, #111, #1a1a1a);
+  border-radius: 12px;
+  border-left: 4px solid orange;
+}
+
+.spec-box h4 {
+  margin-bottom: 10px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.spec-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.spec-box li {
+  margin-bottom: 6px;
+  color: #ddd;
+}
+
+/* Genres */
+.genres {
+  padding: 40px;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.genre-container {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genre-card {
+  width: 250px;
+  height: 130px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.genre-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.genre-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, black, transparent);
+}
+
+.genre-card h3 {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.genre-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px orange;
+  transition: 0.4s;
+}
+
+/* upcoming */
+.upcoming {
+  padding: 40px;
+}
+
+.upcoming-card {
+  display: flex;
+  gap: 20px;
+  background: #000000;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.upcoming-card video {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* games */
+.games {
+  padding: 40px;
+}
+
+.cards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  color: black;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  width: 240px;
+  transition: 0.4s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px white;
+}
+
+/* MEDIA LAYOUT */
+.media-layout {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* LEFT MAIN */
+.main-media {
+  flex: 2;
+  max-width: 700px;
+}
+
+.main-media video,
+.main-media img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(255, 120, 0, 0.6);
+  transition: 0.3s;
+}
+
+/* upcoming photos */
+.media-thumbs {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  max-width: 500px;
+}
+
+.media-thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.media-thumbs img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px orange;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000000;
+}
