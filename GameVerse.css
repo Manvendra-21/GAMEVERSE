@@ -608,6 +608,89 @@ header {
   box-shadow: 0 0 20px orange;
 }
 
+/*contact us */
+.contact {
+  padding: 40px;
+}
+.contact p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 28px;
+  color: #ddd;
+}
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  filter: brightness(0) invert(1);
+}
+.container-contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* reviews */
+.reviews {
+  padding: 60px 20px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+
+.review-heading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  margin: 20px;
+  text-align: left;
+
+}
+
+.review-title {
+  font-size: 2rem;
+  color: orange;
+  margin-bottom: 40px;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background: #111;
+  padding: 25px;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.review-text {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.review-name {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.review-role {
+  font-size: 0.85rem;
+  color: #888;
+}
+ 
 /* footer */
 footer {
   text-align: center;
