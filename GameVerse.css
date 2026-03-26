@@ -16,7 +16,7 @@ body {
 
 /* navbar */
 header {
-  border-bottom: 3px solid orange;
+  border-bottom: 3px solid rgb(0, 0, 0);
   background: linear-gradient(90deg, red, orange, yellow);
 }
 
