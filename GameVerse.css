@@ -361,9 +361,9 @@ header {
 }
 
 .hero-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 200px;
-  background: linear-gradient(90deg, red, orange, yellow);
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 300px;
+  background: linear-gradient(90deg, red, red, yellow);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -372,7 +372,7 @@ header {
 
 .hero-sub {
   font-size: 40px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 @keyframes glow {
