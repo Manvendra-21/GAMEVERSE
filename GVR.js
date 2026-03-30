@@ -16,10 +16,6 @@ function showVideo() {
     event.target.classList.add("active");
 }
 
-window.onload = () => {
-    setSuggestions(["Hello"]);
-};
-
 // for Login
 function openPopup() {
     const popup = document.getElementById("loginPopup");
