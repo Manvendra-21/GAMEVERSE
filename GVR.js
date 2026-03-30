@@ -33,13 +33,6 @@ function closePopup() {
     }, 300);
 }
 
-window.onclick = function(e) {
-    let popup = document.getElementById("loginPopup");
-    if (e.target === popup) {
-        popup.style.display = "none";
-    }
-}
-
 function handleLogin() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
