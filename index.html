@@ -79,6 +79,36 @@
     </nav>
   </header>
 
+    <!-- chatbot -->
+  <div class="chat-toggle" onclick="toggleChat()">
+    🤖
+  </div>
+
+  <!-- box -->
+  <div class="chatbot-box" id="chatbot">
+    <div class="chat-header">
+      GV MasterBot 🤖
+      <span onclick="toggleChat()" class="close-btn">✖</span>
+    </div>
+
+    <div class="chat-body" id="chat-body">
+      <div class="msg bot-msg">Hello Gamer🎮</div>
+    </div>
+
+    <!-- suggestions -->
+    <div class="suggestions">
+      <button onclick="quickMsg('best action games')">Action</button>
+      <button onclick="quickMsg('racing games')">Racing</button>
+      <button onclick="quickMsg('horror games')">Horror</button>
+      <button onclick="quickMsg('rpg games')">RPG</button>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
   <!-- hero -->
   <section class="hero" style="font-family: 'Orbitron', sans-serif;">
     <h1 class="hero-title">DISCOVER</h1>
