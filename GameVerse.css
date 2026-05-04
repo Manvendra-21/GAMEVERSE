@@ -1035,6 +1035,7 @@ body.light-mode .chat-body::-webkit-scrollbar-thumb {
 body.light-mode .hero-title {
   background: linear-gradient(90deg, #6a00ff, #00cfff);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
