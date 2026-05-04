@@ -740,12 +740,11 @@ footer {
   flex-direction: column;
   box-shadow: 0 0 30px rgba(255, 120, 0, 0.4);
   overflow: hidden;
-
   opacity: 0;
   transform: translateY(40px) scale(0.95);
   pointer-events: none;
-
   transition: all 0.3s ease;
+  z-index: 9999;
 }
 
 .chatbot-box.active {
@@ -1051,4 +1050,65 @@ body.light-mode .hero-title {
 
 body.light-mode .hero-title {
   animation: glowLight 1.5s infinite alternate;
+}
+
+/* LOGIN BUTTON (IMPORTANT — still orange) */
+body.light-mode .submit-btn {
+  background: linear-gradient(90deg, #00cfff, #0077ff);
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
+}
+
+/* LOGIN BUTTON HOVER */
+body.light-mode .submit-btn:hover {
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.7);
+}
+
+/* INPUT FOCUS GLOW */
+body.light-mode .input-group input:focus {
+  border-color: #00cfff;
+  box-shadow: 0 0 8px rgba(0, 200, 255, 0.6);
+}
+
+/* LABEL COLOR (when floating) */
+body.light-mode .input-group input:focus + label,
+body.light-mode .input-group input:valid + label {
+  color: #00cfff;
+}
+
+/* SEARCH ICON GLOW */
+body.light-mode .search-box:focus-within .search-icon {
+  color: #00cfff;
+}
+
+/* PROFILE HOVER (still orange glow) */
+body.light-mode .profile-btn:hover {
+  border-color: #00cfff;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
+}
+
+/* CHAT INPUT BUTTON (Send button) */
+body.light-mode .chat-input button {
+  background: #00cfff;
+  color: black;
+}
+
+/* SCROLLBAR FIX (if orange still visible) */
+body.light-mode .chat-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(#6a00ff, #00cfff);
+}
+
+/* 🎬 VIDEO GLOW FIX */
+body.light-mode .video-container,
+body.light-mode .trailer,
+body.light-mode video {
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.5) !important;
+}
+
+body.light-mode .contact-section {
+  color: white;
+}
+
+body.light-mode .contact-section strong {
+  color: #00cfff;
 }
