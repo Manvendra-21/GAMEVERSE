@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  transition: all 0.4s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +17,32 @@ body {
   color: white;
   font-family: 'Poppins', sans-serif;
 }
+
+
+/* theme toggle*/
+
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* LEFT SIDE */
+  background: rgb(255, 0, 0);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255,120,0,0.6);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
 
 /* navbar */
 header {
@@ -864,4 +894,160 @@ footer {
 
 .chat-body::-webkit-scrollbar-thumb:hover {
   background: orange;
+}
+
+
+/* 🌈 PURPLE-BLUE LIGHT MODE */
+
+body.light-mode {
+  background: #0b0f1a; /* dark bluish background */
+  color: #ffffff;
+}
+
+/* Navbar */
+body.light-mode header {
+  background: linear-gradient(90deg, #6a00ff, #0077ff, #00cfff);
+}
+
+body.light-mode .nav-links a {
+  color: white;
+}
+
+body.light-mode .nav-links a::after {
+  background: #00cfff;
+}
+
+/* Logo */
+body.light-mode .logo,
+body.light-mode .remastered {
+  color: white;
+}
+
+/* Search */
+body.light-mode .search {
+  background: #121a2f;
+  color: white;
+  border: 1px solid rgba(0, 200, 255, 0.4);
+}
+
+body.light-mode .search:focus {
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.7);
+}
+
+/* Cards (IMPORTANT CHANGE) */
+body.light-mode .card {
+  background: #000000;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.2);
+}
+
+/* Card hover */
+body.light-mode .card:hover {
+  box-shadow: 0 0 30px rgba(0, 200, 255, 0.6);
+}
+
+/* Links inside cards */
+body.light-mode .card a {
+  color: #00cfff;
+}
+
+body.light-mode .card a:hover {
+  color: #6a00ff;
+}
+
+/* Genre hover glow */
+body.light-mode .genre-card:hover {
+  box-shadow: 0 0 25px #00cfff;
+}
+
+/* Upcoming section */
+body.light-mode .upcoming-card {
+  background: #000;
+  color: white;
+}
+
+/* Spec box */
+body.light-mode .spec-box {
+  background: #121a2f;
+  border-left: 4px solid #00cfff;
+}
+
+/* Reviews */
+body.light-mode .reviews {
+  background: #0b0f1a;
+}
+
+body.light-mode .review-card {
+  background: #121a2f;
+  color: white;
+}
+
+/* Chatbot */
+body.light-mode .chatbot-box {
+  background: #121a2f;
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.5);
+}
+
+body.light-mode .chat-header {
+  background: linear-gradient(90deg, #6a00ff, #00cfff);
+}
+
+/* Chat messages */
+body.light-mode .bot-msg {
+  background: #1b2540;
+  color: white;
+}
+
+body.light-mode .user-msg {
+  background: #00cfff;
+  color: black;
+}
+
+/* Suggestions */
+body.light-mode .suggestions button {
+  background: #1b2540;
+  color: white;
+}
+
+body.light-mode .suggestions button:hover {
+  background: #00cfff;
+  color: black;
+}
+
+/* Chat button (floating) */
+body.light-mode .chat-toggle {
+  background: linear-gradient(135deg, #6a00ff, #00cfff);
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.7);
+}
+
+/* Theme toggle button */
+body.light-mode .theme-toggle-btn {
+  background: linear-gradient(135deg, #6a00ff, #00cfff);
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.7);
+}
+
+/* Scrollbar */
+body.light-mode .chat-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(#6a00ff, #00cfff);
+}
+
+/* 🌟 HERO GLOW ANIMATION CHANGE */
+body.light-mode .hero-title {
+  background: linear-gradient(90deg, #6a00ff, #00cfff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Keyframes override */
+@keyframes glowLight {
+  from {
+    text-shadow: 0 0 10px #6a00ff;
+  }
+  to {
+    text-shadow: 0 0 20px #00cfff;
+  }
+}
+
+body.light-mode .hero-title {
+  animation: glowLight 1.5s infinite alternate;
 }

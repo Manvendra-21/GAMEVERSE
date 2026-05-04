@@ -16,6 +16,33 @@ function showVideo() {
     event.target.classList.add("active");
 }
 
+//theme toggle
+const toggleBtn = document.getElementById("themeToggle");
+
+// Load saved theme
+window.addEventListener("load", () => {
+  let theme = localStorage.getItem("theme");
+
+  if (theme === "light") {
+    document.body.classList.add("light-mode");
+    toggleBtn.innerText = "🌔";
+  }
+});
+
+// Toggle theme
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+
+  if (document.body.classList.contains("light-mode")) {
+    localStorage.setItem("theme", "light");
+    toggleBtn.innerText = "🌔";
+  } else {
+    localStorage.setItem("theme", "dark");
+    toggleBtn.innerText = "🌚";
+  }
+});
+
+
 // for Login
 function openPopup() {
     const popup = document.getElementById("loginPopup");
