@@ -48,7 +48,7 @@ function handleLogin() {
   }, 1000);
 }
 
-document.addEventListener("keydown", function(e) {
+document.getElementById("loginPopup").addEventListener("keydown", function(e) {
   if (e.key === "Enter") {
     handleLogin();
   }
@@ -223,4 +223,46 @@ function goToUpcoming() {
     document.getElementById("Upcoming").scrollIntoView({
         behavior: "smooth"
     });
+}
+
+function handleSearch() {
+  const input = document.querySelector(".search");
+  const query = input.value.toLowerCase().trim();
+
+  if (query === "") return;
+
+  // gener search
+  if (query.includes("action")) {
+    document.getElementById("action").scrollIntoView({ behavior: "smooth" });
+  }
+  else if (query.includes("racing")) {
+    document.getElementById("racing").scrollIntoView({ behavior: "smooth" });
+  }
+  else if (query.includes("rpg")) {
+    document.getElementById("rpg").scrollIntoView({ behavior: "smooth" });
+  }
+  else if (query.includes("horror")) {
+    document.getElementById("horror").scrollIntoView({ behavior: "smooth" });
+  }
+
+  // game search
+  else if (query.includes("gta")) {
+    window.location.href = "webpages_games/gtav.html";
+  }
+  else if (query.includes("rdr2") || query.includes("red dead")) {
+    window.location.href = "webpages_games/rdr2.html";
+  }
+  else if (query.includes("god of war")) {
+    window.location.href = "webpages_games/gowr.html";
+  }
+  else if (query.includes("hitman")){
+    window.location.href = "webpages_games/hitman3.html";
+  }
+  else if (query.includes("call of duty") || query.includes("black ops")) {
+    window.location.href = "webpages_games/codblackops.html";
+  }
+
+  else {
+    alert("No results found 😅");
+  }
 }
