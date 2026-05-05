@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>GameVerse Remastered</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- fonts -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+    rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -49,7 +52,8 @@
       <div class="nav-right">
         <div class="search-box">
           <span class="search-icon" onclick="handleSearch()">🔍</span>
-          <input class="search" type="text" placeholder="Search games..." onkeydown="if(event.key==='Enter') handleSearch()">
+          <input class="search" type="text" placeholder="Search games..."
+            onkeydown="if(event.key==='Enter') handleSearch()">
         </div>
 
         <div class="profile-btn" onclick="openPopup()">
@@ -68,9 +72,10 @@
             <label>Username/Email</label>
           </div>
 
-          <div class="input-group">
+          <div class="input-group password-group">
             <input type="password" id="password" required>
             <label>Password</label>
+            <span class="toggle-password" onclick="togglePassword()">👁</span>
           </div>
           <button class="submit-btn" onclick="handleLogin()">Login→</button><br>
           <p id="login-msg"></p>
@@ -79,7 +84,7 @@
     </nav>
   </header>
 
-    <!-- chatbot -->
+  <!-- chatbot -->
   <div class="chat-toggle" onclick="toggleChat()">
     🤖
   </div>
@@ -110,9 +115,9 @@
   </div>
 
   <!--  themetoggle  -->
-    <div id="themeToggle" class="theme-toggle-btn">
-      🌚
-    </div>
+  <div id="themeToggle" class="theme-toggle-btn">
+    🌚
+  </div>
 
   <!-- hero -->
   <section class="hero" style="font-family: 'Orbitron', sans-serif;">
@@ -328,42 +333,42 @@
       </div>
     </div>
   </section>
-  
+
   <!-- reviews -->
-  
-    <section class="reviews" id="reviews">
-      <h2 class="review-heading">→ Reviews</h2>
-      <h2 class="review-title">What Gamers Say !!</h2>
-  
-      <div class="review-container">
-        
-        <div class="review-card">
-          <p class="review-text">
-            "GameVerse helped me discover amazing games I never knew existed. Perfect for beginners!"
-          </p>
-          <h4 class="review-name">– Arjun Mehta</h4>
-          <span class="review-role">Casual Gamer</span>
-        </div>
-  
-        <div class="review-card">
-          <p class="review-text">
-            "Feels like IMDb for games. Clean UI and super helpful for exploring new titles."
-          </p>
-          <h4 class="review-name">– Elvish Yadav</h4>
-          <span class="review-role">Content Creator</span>
-        </div>
-  
-        <div class="review-card">
-          <p class="review-text">
-            "As a beginner, this site made entering the gaming world so easy and fun!"
-          </p>
-          <h4 class="review-name">– Karan Verma</h4>
-          <span class="review-role">New Gamer</span>
-        </div>
-  
+
+  <section class="reviews" id="reviews">
+    <h2 class="review-heading">→ Reviews</h2>
+    <h2 class="review-title">What Gamers Say !!</h2>
+
+    <div class="review-container">
+
+      <div class="review-card">
+        <p class="review-text">
+          "GameVerse helped me discover amazing games I never knew existed. Perfect for beginners!"
+        </p>
+        <h4 class="review-name">– Arjun Mehta</h4>
+        <span class="review-role">Casual Gamer</span>
       </div>
-    </section>
-  
+
+      <div class="review-card">
+        <p class="review-text">
+          "Feels like IMDb for games. Clean UI and super helpful for exploring new titles."
+        </p>
+        <h4 class="review-name">– Elvish Yadav</h4>
+        <span class="review-role">Content Creator</span>
+      </div>
+
+      <div class="review-card">
+        <p class="review-text">
+          "As a beginner, this site made entering the gaming world so easy and fun!"
+        </p>
+        <h4 class="review-name">– Karan Verma</h4>
+        <span class="review-role">New Gamer</span>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Contact us -->
 
   <section id="contact" class="contact">
@@ -382,7 +387,8 @@
   <footer>
     <p>© 2026 GameVerse Remastered</p>
   </footer>
-  
-<script src="GVR.js"></script>
+
+  <script src="GVR.js"></script>
 </body>
+
 </html>

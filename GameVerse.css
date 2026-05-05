@@ -268,6 +268,25 @@ header {
   padding: 0 5px;
 }
 
+/* 👁 show password icon */
+.password-group {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.toggle-password:hover {
+  color: #00cfff;
+}
+
 .popup-content input {
   width: 100%;
   padding: 10px;
@@ -1114,4 +1133,71 @@ body.light-mode .contact-section {
 
 body.light-mode .contact-section strong {
   color: #00cfff;
+}
+
+body.light-mode a {
+  color:white !important;
+  text-decoration: none;
+}
+
+body.light-mode .review-heading {
+  color: inherit !important;
+}
+
+body.light-mode .reviews h2 {
+  background: linear-gradient(90deg, #6a00ff, #00cfff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+body.light-mode .contact p[style] {
+  background: linear-gradient(90deg, #6a00ff, #00cfff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+body.light-mode .media-thumbs img:hover {
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.8) !important;
+}
+
+body.light-mode .main-media video,
+body.light-mode .main-media img {
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.6) !important;
+}
+
+body.light-mode #login-msg {
+  background: linear-gradient(90deg, #00cfff, #0077ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  font-weight: 500;
+}
+
+body.light-mode .popup {
+  background: rgba(0, 0, 0, 0.75); /* stronger overlay */
+  backdrop-filter: blur(10px);
+}
+
+body.light-mode .popup-content {
+  background: #0b0f1a;
+  box-shadow: 
+    0 0 30px rgba(0, 200, 255, 0.25),
+    0 0 60px rgba(0, 120, 255, 0.15);
+}
+
+body.light-mode .review-card {
+  background: #121a2f;
+  color: white;
+  box-shadow: 
+    0 0 10px rgba(0, 200, 255, 0.08),
+    0 0 20px rgba(0, 120, 255, 0.05);
+  transition: all 0.35s ease;
+}
+
+body.light-mode .review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 0 30px rgba(0, 200, 255, 0.4),
+    0 0 60px rgba(0, 120, 255, 0.25);
 }
