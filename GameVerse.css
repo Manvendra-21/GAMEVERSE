@@ -1146,7 +1146,7 @@ body.light-mode .review-heading {
 
 body.light-mode .reviews h2 {
   background: linear-gradient(90deg, #6a00ff, #00cfff);
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
