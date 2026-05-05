@@ -1201,3 +1201,12 @@ body.light-mode .review-card:hover {
     0 0 30px rgba(0, 200, 255, 0.4),
     0 0 60px rgba(0, 120, 255, 0.25);
 }
+
+body:not(.light-mode) .toggle-password {
+  color: white;
+  transition: all 0.25s ease;
+}
+
+body:not(.light-mode) .toggle-password:hover {
+  color: #ffd700;
+}
