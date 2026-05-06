@@ -10,10 +10,6 @@ function showVideo() {
       <source src="./video_gameverse/gta6.mp4" type="video/mp4">
     </video>
   `;
-    document.querySelectorAll(".media-thumbs img").forEach(img => {
-        img.classList.remove("active");
-    });
-    event.target.classList.add("active");
 }
 
 //theme toggle
