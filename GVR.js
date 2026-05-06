@@ -71,6 +71,16 @@ function handleLogin() {
   }, 1000);
 }
 
+function togglePassword() {
+  const input = document.getElementById("password");
+
+  if (input.type === "password") {
+    input.type = "text";
+  } else {
+    input.type = "password";
+  }
+}
+
 document.getElementById("loginPopup").addEventListener("keydown", function(e) {
   if (e.key === "Enter") {
     handleLogin();
@@ -78,7 +88,6 @@ document.getElementById("loginPopup").addEventListener("keydown", function(e) {
 });
 
 // chatbot
-
 window.onload = () => {
     setSuggestions(["Hello"]);
 };
@@ -287,15 +296,5 @@ function handleSearch() {
 
   else {
     alert("No results found 😅");
-  }
-}
-
-function togglePassword() {
-  const input = document.getElementById("password");
-
-  if (input.type === "password") {
-    input.type = "text";
-  } else {
-    input.type = "password";
   }
 }
