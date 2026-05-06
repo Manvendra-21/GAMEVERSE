@@ -1210,3 +1210,8 @@ body:not(.light-mode) .toggle-password {
 body:not(.light-mode) .toggle-password:hover {
   color: #ffd700;
 }
+
+body.light-mode .typing span {
+  background: #00cfff;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.8);
+}
