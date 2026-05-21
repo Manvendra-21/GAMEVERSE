@@ -1215,3 +1215,200 @@ body.light-mode .typing span {
   background: #00cfff;
   box-shadow: 0 0 10px rgba(0, 200, 255, 0.8);
 }
+
+
+
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .hero-title{
+    font-size: 160px;
+  }
+
+  .hero-sub{
+    font-size: 28px;
+  }
+
+  .navbar{
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links{
+    gap: 20px;
+    margin-left: 0;
+  }
+
+  .search{
+    width: 180px;
+  }
+
+  .main-media{
+    max-width: 100%;
+  }
+
+  .media-thumbs{
+    max-width: 100%;
+  }
+
+}
+
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+  body{
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  .navbar{
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .brand{
+    justify-content: center;
+  }
+
+  .nav-links{
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+  }
+
+  .nav-right{
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .search{
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .search:focus{
+    width: 100%;
+  }
+
+  /* HERO */
+  .hero{
+    padding-top: 220px;
+  }
+
+  .hero-title{
+    font-size: 80px;
+    line-height: 1;
+  }
+
+  .hero-sub{
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  /* SECTIONS */
+  .genres,
+  .games,
+  .reviews,
+  .contact{
+    padding: 20px;
+  }
+
+  /* CARDS */
+  .cards{
+    gap: 20px;
+  }
+
+  .card{
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* GENRE */
+  .genre-card{
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* UPCOMING */
+  .media-layout{
+    flex-direction: column;
+  }
+
+  .media-thumbs{
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+  }
+
+  .upcoming-card{
+    padding: 15px;
+  }
+
+  /* CHATBOT */
+  .chatbot-box{
+    width: 90%;
+    right: 5%;
+    bottom: 80px;
+  }
+
+  /* REVIEW */
+  .review-card{
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* CONTACT */
+  .contact p{
+    font-size: 20px;
+  }
+
+  /* FLOAT BUTTONS */
+  .theme-toggle-btn,
+  .chat-toggle{
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+}
+
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+  .hero-title{
+    font-size: 55px;
+  }
+
+  .hero-sub{
+    font-size: 16px;
+  }
+
+  .section-title{
+    font-size: 22px;
+  }
+
+  .logo{
+    font-size: 20px;
+  }
+
+  .search{
+    max-width: 250px;
+  }
+
+  .popup-content{
+    width: 90%;
+    padding: 20px;
+  }
+
+}
